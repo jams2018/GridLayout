@@ -2,6 +2,7 @@ package com.example.anar.gridlayout;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,15 +17,15 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     private Context context;
     private List<Movie> list;
 
-    public MovieAdapter(Context context, List<Movie> list) {
+    MovieAdapter(Context context, List<Movie> list) {
         this.context = context;
         this.list = list;
     }
-
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.single_item, parent, false);
-        final ViewHolder viewHolder = new ViewHolder(v); // added
+        final ViewHolder viewHolder = new ViewHolder(v);
         viewHolder.view_container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,11 +40,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             }
         });
 
-        return new ViewHolder(v);
+        return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Movie movie = list.get(position);
 
         holder.textTitle.setText(movie.getTitle());
@@ -56,12 +57,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         return list.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView textTitle, textYear;
+    class ViewHolder extends RecyclerView.ViewHolder {
+        TextView textTitle, textYear;
                LinearLayout view_container;
 
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
 
             view_container = itemView.findViewById(R.id.container);

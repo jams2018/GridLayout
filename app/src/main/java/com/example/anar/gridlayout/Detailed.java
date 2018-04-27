@@ -39,11 +39,11 @@ public class Detailed extends AppCompatActivity {
         movie_title.setText(title);
         movie_description.setText(description);
         movie_director.setText(director);
-        movie_year.setText(year);
+        movie_year.setText(String.valueOf(year));
 
         collapsingToolbarLayout.setTitle(title);
 
         // set image
-        Glide.with(this).load(thumbnail);
+        Glide.with(this).load(thumbnail).into(movie_image);
     }
 }
