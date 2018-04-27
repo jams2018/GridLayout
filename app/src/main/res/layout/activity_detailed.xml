@@ -42,6 +42,7 @@
                     android:id="@+id/main_thumbnail"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/main_thumbnail"
                     android:background="@drawable/ic_launcher_background"/>
 
                 <LinearLayout
@@ -53,21 +54,18 @@
 
                 <TextView
                     android:id="@+id/main_title"
-                    android:text="Title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/main_director"
-                    android:text="Director"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/main_year"
-                    android:text="Year"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
@@ -89,7 +87,6 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Description"
             android:id="@+id/main_description"/>
 
 

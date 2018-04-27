@@ -2,4 +2,7 @@
     <string name="app_name">Grid Layout</string>
     <string name="main_title">Title</string>
     <string name="main_year">Year</string>
+    <string name="main_director">Director</string>
+    <string name="main_description">Description</string>
+    <string name="main_thumbnail">Image</string>
 </resources>
