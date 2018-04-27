@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Grid Layout</string>
+    <string name="main_title">Title</string>
+    <string name="main_year">Year</string>
+</resources>
