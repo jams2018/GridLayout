@@ -18,10 +18,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ActivityTopLeft"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".Detailed" />
+
+        <activity android:name=".ActivityTopLeft">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Detailed">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+        </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

@@ -41,7 +41,7 @@
                 <ImageView
                     android:id="@+id/main_thumbnail"
                     android:layout_width="100dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="150dp"
                     android:contentDescription="@string/main_thumbnail"
                     android:background="@drawable/ic_launcher_background"/>
 

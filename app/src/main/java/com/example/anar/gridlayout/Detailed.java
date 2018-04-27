@@ -5,11 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
-import com.example.anar.gridlayout.R;
-
-import org.w3c.dom.Text;
 
 public class Detailed extends AppCompatActivity {
 
@@ -17,8 +13,6 @@ public class Detailed extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed);
-
-        getSupportActionBar().hide();
 
         String title = getIntent().getExtras().getString("title");
         String description = getIntent().getExtras().getString("description");
