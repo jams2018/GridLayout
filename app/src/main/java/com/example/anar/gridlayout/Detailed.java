@@ -1,10 +1,11 @@
 package com.example.anar.gridlayout;
 
+import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.bumptech.glide.Glide;
 
 public class Detailed extends AppCompatActivity {
@@ -18,26 +19,26 @@ public class Detailed extends AppCompatActivity {
         String description = getIntent().getExtras().getString("description");
         String director = getIntent().getExtras().getString("director");
         int year = getIntent().getExtras().getInt("year");
-        String thumbnail = getIntent().getExtras().getString("image");
+        String image = getIntent().getExtras().getString("image");
 
         CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsingtoolbar_id);
         collapsingToolbarLayout.setTitleEnabled(true);
 
-        TextView movie_title = findViewById(R.id.main_title);
-        TextView movie_description = findViewById(R.id.main_description);
-        TextView movie_director = findViewById(R.id.main_director);
-        TextView movie_year = findViewById(R.id.main_year);
-        ImageView movie_image = findViewById(R.id.main_thumbnail);
+        TextView main_title = findViewById(R.id.main_title);
+        TextView main_description = findViewById(R.id.main_description);
+        TextView main_director = findViewById(R.id.main_director);
+        TextView main_year = findViewById(R.id.main_year);
+        ImageView main_thumbnail = findViewById(R.id.main_thumbnail);
 
         // set values
-        movie_title.setText(title);
-        movie_description.setText(description);
-        movie_director.setText(director);
-        movie_year.setText(String.valueOf(year));
+        main_title.setText(title);
+        main_description.setText(description);
+        main_director.setText(director);
+        main_year.setText(String.valueOf(year));
 
         collapsingToolbarLayout.setTitle(title);
 
         // set image
-        Glide.with(this).load(thumbnail).into(movie_image);
+        Glide.with(this).load(image).into(main_thumbnail);
     }
 }
