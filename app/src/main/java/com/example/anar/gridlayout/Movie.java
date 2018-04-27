@@ -3,12 +3,12 @@ package com.example.anar.gridlayout;
 public class Movie {
 
     public String title;
-    public int year;
-    public String director;
-    public String thumbnail;
+    private int year;
+    private String director;
+    private String thumbnail;
     public String description;
 
-    public Movie() {
+    Movie() {
 
     }
 
@@ -23,9 +23,7 @@ public class Movie {
     // getters
     public String getTitle() { return title; }
 
-    public int getYear() {
-        return year;
-    }
+    public int getYear() { return year; }
 
     public String getDirector() { return director; }
 
@@ -46,6 +44,6 @@ public class Movie {
 
     public void setThumbnail(String thumbnail) { this.thumbnail = thumbnail; }
 
-    public void setDescription(String description) { this.thumbnail = description; }
+    public void setDescription(String description) { this.description = description; }
 
 }
