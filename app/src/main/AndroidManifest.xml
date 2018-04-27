@@ -21,7 +21,7 @@
         <activity
             android:name=".ActivityTopLeft"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".Detailed"></activity>
+        <activity android:name=".Detailed" />
     </application>
 
 </manifest>
