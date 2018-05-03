@@ -20,6 +20,7 @@
         </activity>
         <activity
             android:name=".DisplayMessageActivity"
+            android:label="Message"
             android:parentActivityName=".MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -27,17 +28,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".ActivityTopLeft">
+        <activity
+            android:name=".ActivityTopLeft"
+            android:label="List"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".Detailed">
+        <activity
+            android:name=".Detailed"
+            android:label="Detailed">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".About"></activity>
+        <activity
+            android:name=".About"
+            android:label="About"/>
     </application>
 
 </manifest>
