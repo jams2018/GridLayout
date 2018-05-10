@@ -1,12 +1,15 @@
 package com.example.anar.gridlayout;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
@@ -20,12 +23,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     public static final String EXTRA_MESSAGE = "com.example.gridlayout.MESSAGE";
     private static final String TAG = "MainActivity";
+    private SharedPreferencesHelper mSharedPreferencesHelper;
 
     GridLayout mainGrid;
 
@@ -34,6 +37,16 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate() is called");
+
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
+        // Instantiate a SharedPreferencesHelper class
+        SharedPreferences mSharedPreferences = this.getPreferences(Context.MODE_PRIVATE);
+        mSharedPreferencesHelper = new SharedPreferencesHelper(mSharedPreferences);
+
+        // populate text field w/ saved entry
+        EditText editText = findViewById(R.id.editText);
+        editText.setText(mSharedPreferencesHelper.getEntry());
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -133,11 +146,19 @@ public class MainActivity extends AppCompatActivity
 
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = findViewById(R.id.editText);
         String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
+
+        if (inputIsValid(message)) {
+            mSharedPreferencesHelper.saveEntry(message);
+            Intent intent = new Intent(this, DisplayMessageActivity.class);
+            intent.putExtra(EXTRA_MESSAGE, message);
+            startActivity(intent);
+        }
+    }
+
+    public boolean inputIsValid(String str) {
+        return str.length() != 0;
     }
 
     @Override
