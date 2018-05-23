@@ -139,9 +139,16 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         }
 
-        if (id == R.id.camera_list){
+        if (id == R.id.camera_list) {
             Intent intent = new Intent(this, CameraList.class);
-            startActivity(intent);
+            if (isNetworkAvailable(MainActivity.this)) //returns true if internet available
+            {
+                startActivity(intent);
+            } else {
+                Toast toast = Toast.makeText(MainActivity.this, "No Connection!", Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 16);
+                toast.show();
+            }
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

@@ -21,17 +21,9 @@
 
         <TextView
             android:id="@+id/camera_id"
-            android:layout_width="182dp"
+            android:layout_width="180dp"
             android:text="@string/camera_name"
             android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"/>
-
-        <TextView
-            android:id="@+id/connection"
-            android:layout_width="182dp"
-            android:layout_height="wrap_content"
-            android:text="@string/connection"
-            android:layout_below="@id/camera_id"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 </LinearLayout>
