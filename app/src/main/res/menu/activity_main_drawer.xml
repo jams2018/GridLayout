@@ -12,6 +12,10 @@
             android:id="@+id/movie_menu"
             android:icon="@drawable/movies"
             android:title="@string/movies_title" />
+
+        <item android:id="@+id/camera_list"
+            android:icon="@drawable/baseline_camera_black_18dp"
+            android:title="@string/cameras"/>
     </group>
 
 </menu>

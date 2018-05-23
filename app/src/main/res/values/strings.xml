@@ -23,4 +23,8 @@
     <string name="toast_2">Toast 2</string>
     <string name="toast_1">Toast 1</string>
     <string name="display_message">TextView</string>
+    <string name="camera_name">Camera Name</string>
+    <string name="camera_image">Camera Image</string>
+    <string name="cameras">Cameras</string>
+    <string name="connection">Connection</string>
 </resources>

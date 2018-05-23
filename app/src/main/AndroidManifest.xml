@@ -3,6 +3,8 @@
     package="com.example.anar.gridlayout">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -46,6 +48,14 @@
         <activity
             android:name=".About"
             android:label="About"/>
+        <activity
+            android:name=".CameraList"
+            android:label="Camera"            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

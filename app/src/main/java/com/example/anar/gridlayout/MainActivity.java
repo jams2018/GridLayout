@@ -3,11 +3,12 @@ package com.example.anar.gridlayout;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -138,6 +139,10 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         }
 
+        if (id == R.id.camera_list){
+            Intent intent = new Intent(this, CameraList.class);
+            startActivity(intent);
+        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -159,6 +164,20 @@ public class MainActivity extends AppCompatActivity
 
     public boolean inputIsValid(String str) {
         return str.length() != 0;
+    }
+
+    public boolean isNetworkAvailable(Context context) {
+
+        ConnectivityManager connectivity = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        if (null != connectivity) {
+            NetworkInfo info = connectivity.getActiveNetworkInfo();
+            if (null != info && info.isConnected()) {
+                return info.getState() == NetworkInfo.State.CONNECTED;
+            }
+        }
+        return false;
     }
 
     @Override
