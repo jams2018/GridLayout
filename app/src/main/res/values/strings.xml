@@ -27,5 +27,5 @@
     <string name="camera_image">Camera Image</string>
     <string name="cameras">Cameras</string>
     <string name="connection">Connection</string>
-    <string name="com.google.android.geo.API_KEY">AIzaSyDAsOuZskL7UdeTzc3UR4hLKqCjiepglUY</string>
+    <string name="com.google.android.geo.API_KEY">API_here</string>
 </resources>
