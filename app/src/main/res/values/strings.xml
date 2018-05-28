@@ -13,7 +13,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="intro">My name is Anar Jamsran. I am a student at North Seattle studying in the Application Development Program. This is my first app in Android Studios. I am excited to learn new things every week using the application development tools.</string>
+    <string name="intro">First App</string>
     <string name="list">Movie List</string>
     <string name="about_app">Welcome to Anar\'s first app. This app displays the information about the author, a simple button to show a message, and enumerate a list of zombie movies in a list and detailed views. Also, you may find the image, title, the production year, producer and descriptions of the movies. Stay tuned for more development…</string>
     <string name="about_title">About</string>
