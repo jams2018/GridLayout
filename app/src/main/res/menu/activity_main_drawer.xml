@@ -16,6 +16,10 @@
         <item android:id="@+id/camera_list"
             android:icon="@drawable/baseline_camera_black_18dp"
             android:title="@string/cameras"/>
+
+        <item android:id="@+id/maps"
+            android:icon="@drawable/baseline_place_black_18dp"
+            android:title="Maps"/>
     </group>
 
 </menu>

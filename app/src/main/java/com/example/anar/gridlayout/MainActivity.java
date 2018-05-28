@@ -151,6 +151,18 @@ public class MainActivity extends AppCompatActivity
             }
         }
 
+        if (id == R.id.maps) {
+            Intent intent = new Intent(this, MapActivity.class);
+            if (isNetworkAvailable(MainActivity.this)) //returns true if internet available
+            {
+                startActivity(intent);
+            } else {
+                Toast toast = Toast.makeText(MainActivity.this, "No Connection!", Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 16);
+                toast.show();
+            }
+        }
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
