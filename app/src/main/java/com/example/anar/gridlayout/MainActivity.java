@@ -151,8 +151,8 @@ public class MainActivity extends AppCompatActivity
             }
         }
 
-        if (id == R.id.maps) {
-            Intent intent = new Intent(this, MapActivity.class);
+        if (id == R.id.my_map) {
+            Intent intent = new Intent(this, MapsActivity.class);
             if (isNetworkAvailable(MainActivity.this)) //returns true if internet available
             {
                 startActivity(intent);

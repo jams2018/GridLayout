@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -21,7 +22,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="dummmmmmyyyyyykeeeeeyyyyyyy"/>
+            android:value="@string/google_maps_key"/>
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -66,7 +67,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MapActivity"
+            android:name=".MapsActivity"
             android:label="Map"            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

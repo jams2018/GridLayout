@@ -17,7 +17,7 @@
             android:icon="@drawable/baseline_camera_black_18dp"
             android:title="@string/cameras"/>
 
-        <item android:id="@+id/maps"
+        <item android:id="@+id/my_map"
             android:icon="@drawable/baseline_place_black_18dp"
             android:title="Maps"/>
     </group>
